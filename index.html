@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffd9e6" />
+  <meta name="description" content="A little question, just for you." />
+  <title>For Jaanu ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background: soft glow, sparkles, floating hearts -->
+  <div class="bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div id="sparkle-layer"></div>
+    <div id="hearts-layer"></div>
+  </div>
+
+  <!-- Particle layer for bursts / confetti -->
+  <div id="fx-layer" aria-hidden="true"></div>
+
+  <!-- Loading animation -->
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-heart">
+      <div class="orbit" aria-hidden="true"><i>✨</i><i>💗</i><i>✨</i><i>💗</i></div>
+      <span>❤️</span>
+    </div>
+    <p class="loader-text">Wrapping something special…</p>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- Music toggle -->
+  <button id="music-btn" class="music-btn" type="button" aria-label="Turn music on" aria-pressed="false">🔇</button>
+
+  <main>
+
+    <!-- SCREEN 1 · The question -->
+    <section class="screen is-active" id="screen-ask">
+      <div class="screen-inner">
+        <div class="glass ask-card" id="ask-card">
+          <span class="float-emoji" aria-hidden="true">💌</span>
+          <h1 class="title">Jaanu, Will You Be My Girlfriend? <span class="beat">❤️</span></h1>
+
+          <div class="choices" id="choices">
+            <button class="btn btn-yes" id="yes-btn" type="button">💖 Yes</button>
+            <span class="no-slot" id="no-slot">
+              <button class="btn btn-no" id="no-btn" type="button">🙈 No</button>
+            </span>
+          </div>
+
+          <p class="taunt" id="taunt" aria-live="polite">Choose wisely 😉</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2 · Celebration with the kissing cat -->
+    <section class="screen" id="screen-celebrate">
+      <div class="screen-inner celebrate stagger">
+        <h2 class="cele-title">Yaaay! 🎉</h2>
+        <div class="glass gif-frame">
+          <div class="art" id="kiss-art"></div>
+        </div>
+        <p class="cele-text">You just made me the happiest person alive. 💞</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 3 · Gift, envelope and letter -->
+    <section class="screen" id="screen-gift">
+      <div class="screen-inner gift">
+
+        <p class="glass gift-msg">Here's your gift, my love. 🎁❤️</p>
+
+        <button class="btn btn-gift" id="open-gift" type="button">
+          <span class="gift-icon" aria-hidden="true">🎁</span> Open Your Gift
+        </button>
+
+        <figure class="sticker" id="sticker" hidden>
+          <div class="art" id="sticker-art"></div>
+        </figure>
+
+        <div class="envelope-stage" id="envelope-stage" hidden>
+          <div class="envelope" id="envelope" aria-hidden="true">
+            <div class="env-back"></div>
+            <div class="env-letter">
+              <b>For you</b>
+              <i></i><i></i><i></i>
+            </div>
+            <div class="env-front"></div>
+            <div class="env-flap"></div>
+            <div class="env-seal">❤️</div>
+          </div>
+        </div>
+
+        <article class="letter" id="letter" hidden>
+          <div class="letter-sticker" id="letter-sticker" aria-hidden="true"></div>
+          <div id="letter-body"></div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
